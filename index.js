@@ -109,7 +109,7 @@ app.get("/*", function (req, res) {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-mongoose.connect(`MONGODB CONNECTION STRING`, {
+mongoose.connect("mongodb+srv://softieons:Softieons%4012345@cluster0.8hqyu.mongodb.net/Livestreaming-db?authSource=admin&replicaSet=atlas-xgnlx2-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

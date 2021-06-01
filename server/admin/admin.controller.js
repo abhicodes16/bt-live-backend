@@ -342,8 +342,8 @@ exports.sendEmail = async (req, res, next) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "YOUR EMAIL ID",
-        pass: "YOUR EMAIL PASSWORD",
+        user: "abhi.softieons@gmail.com",
+        pass: "Anikesh16",
       },
     });
 
@@ -399,7 +399,7 @@ exports.sendEmail = async (req, res, next) => {
       "</td></tr></table></td></tr></table></td></tr></table></td></tr></table></body></html>";
 
     var mailOptions = {
-      from: "YOUR EMAIL ID",
+      from: "abhi.softieons@gmail.com",
       to: req.body.email,
       subject: "Sending Email from Xitij Infotech",
       html: tab,
