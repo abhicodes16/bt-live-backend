@@ -6,8 +6,8 @@ module.exports = {
   secret_key: "DP6FfijzVzXBtBq45zcazsDQrOhMdg",
 };
 
+//done ?
+//wait i check agora
 
-//did you put this code on server?
-//Yes
-
-//deploy again ??? yes ok
+//first import the setting table in DB
+//how?

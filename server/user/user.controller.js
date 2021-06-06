@@ -547,9 +547,17 @@ exports.search = async (req, res) => {
       const followers = await Follower.find({
         from_user_id: req.query.user_id,
       });
+      // response = await User.find({
+      //   name: { $regex: req.query.name, $options: "i" },
+      // });
+
       response = await User.find({
-        name: { $regex: req.query.name, $options: "i" },
+        $or: [
+          { name: { $regex: req.query.name, $options: "i" } },
+          { username: { $regex: req.query.name, $options: "i" } },
+        ]
       });
+
 
       const list = [];
 
