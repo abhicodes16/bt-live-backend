@@ -1,0 +1,2 @@
+const mongoURL = "mongodb+srv://softieons:Softieons%4012345@cluster0.8hqyu.mongodb.net/Livestreaming-db?authSource=admin&replicaSet=atlas-xgnlx2-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true";
+module.exports = mongoURL;

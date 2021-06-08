@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
+const mongoURL = require("./util/mongodbURL")
 
 const app = express();
 
@@ -109,7 +110,7 @@ app.get("/*", function (req, res) {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-mongoose.connect("mongodb+srv://softieons:Softieons%4012345@cluster0.8hqyu.mongodb.net/Livestreaming-db?authSource=admin&replicaSet=atlas-xgnlx2-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true", {
+mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
