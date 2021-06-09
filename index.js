@@ -71,6 +71,10 @@ app.use("/category", CategoryRoute);
 const GiftRoute = require("./server/gift/gift.route");
 app.use("/gift", GiftRoute);
 
+//feedback route
+const FeedbackRoute = require("./server/feedback/feedback.route");
+app.use("/feedback", FeedbackRoute);
+
 //follower route
 const FollowerRoute = require("./server/follower/follower.route");
 app.use("/", FollowerRoute);

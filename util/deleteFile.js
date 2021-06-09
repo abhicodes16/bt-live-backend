@@ -6,6 +6,6 @@ exports.deleteFile = (file) => {
   }
 };
 
-exports.deleteVideo = (files) => {
+exports.deleteVideo = (files) => {  
   files.forEach((item) => this.deleteFile(item));
 };
