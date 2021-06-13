@@ -16,4 +16,8 @@ router.get("/", FeedbackController.index);
 
 router.post("/", upload.single("icon"), FeedbackController.store);
 
+router.delete("/:feedback_id", FeedbackController.destroy);
+
+router.delete("/delete/:feedback_id", FeedbackController.destroyAll);
+
 module.exports = router;
