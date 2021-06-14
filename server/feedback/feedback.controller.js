@@ -32,7 +32,8 @@ exports.store = async (req, res, next) => {
         .status(200)
         .json({ status: false, message: "Inavlid userid." });
     }
-    const user = await User.findById(req.body.userid);
+    
+    const user = await User.findById(req.body.userid);  
     if(!user) {
         return res
         .status(200)

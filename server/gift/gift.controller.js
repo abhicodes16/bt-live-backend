@@ -12,7 +12,7 @@ exports.index = async (req, res) => {
 
     return res
       .status(200)
-      .json({ status: true, message: "success", data: gift });
+      .json({ status: true, message: "success", data: gift });  
   } catch (error) {
     console.log(error);
     return res
