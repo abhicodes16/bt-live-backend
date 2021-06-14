@@ -7,6 +7,6 @@ module.exports = multer.diskStorage({
     callback(null, filename);
   },
   destination: (req, file, callback) => {
-    callback(null, "storage");
+    callback(null, "uploadFiles");
   },
 });

@@ -2,6 +2,7 @@ const Feedback = require("./feedback.model");
 const User = require("../user/user.model");
 const { deleteFile } = require("../../util/deleteFile");
 const fs = require("fs");
+const {exit} = require('process');
 
 exports.index = async (req, res, next) => {
   try {
@@ -32,7 +33,6 @@ exports.store = async (req, res, next) => {
         .status(200)
         .json({ status: false, message: "Inavlid userid." });
     }
-    
     const user = await User.findById(req.body.userid);  
     if(!user) {
         return res
@@ -52,13 +52,14 @@ exports.store = async (req, res, next) => {
     //     .status(200)
     //     .json({ status: false, message: "Please select an image." });
     // }
-
+    
     const feedback = await Feedback.create({
       userid: req.body.userid,
       email: req.body.email,
       feedbackMsg: req.body.feedbackMsg,
       icon: req.file.path,
     });
+    
     
     return res.status(200).json({ status: true, message: "Success", data: feedback})
 

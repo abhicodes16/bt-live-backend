@@ -110,6 +110,9 @@ app.use("/redeem", RedeemRoute);
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/storage", express.static(path.join(__dirname, "storage")));
 
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/uploadFiles", express.static(path.join(__dirname, "uploadFiles")));
+
 app.get("/*", function (req, res) {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
